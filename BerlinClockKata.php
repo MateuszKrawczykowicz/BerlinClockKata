@@ -44,14 +44,30 @@ class BerlinClockKata
 
     public function simpleHour(string $number):string{
         $out="";
-        $nbrmin = 0;
-        $nbrmin += intval($number[0]) *10;
-        $nbrmin += intval($number[1]) ;
-        $nbrmin = $nbrmin%5;
+        $nbrhour = 0;
+        $nbrhour += intval($number[0]) *10;
+        $nbrhour += intval($number[1]) ;
+        $nbrhour = $nbrhour%5;
         for ($x = 0 ; $x<=3; $x++){
-            if ($nbrmin>=1){
+            if ($nbrhour>=1){
                 $out = $out . "Y ";
-                $nbrmin -=1;
+                $nbrhour -=1;
+            } else{
+                $out = $out . "O ";
+            }
+        }
+        return $out;
+    }
+
+    public function blockHour(string $number):string{
+        $out="";
+        $nbrhour = 0;
+        $nbrhour += intval($number[0]) *10;
+        $nbrhour += intval($number[1]) ;
+        for ($x = 0 ; $x<=3; $x++){
+            if ($nbrhour>=5){
+                $out = $out . "Y ";
+                $nbrhour -=5;
             } else{
                 $out = $out . "O ";
             }
