@@ -81,9 +81,10 @@ class BerlinClockKata
         }
     }
 
-
-
-
-
-
+    //Etape 7 : intégrer l’horloge entière
+    public function clock(string $number):string{
+        $clock = "";
+        $clock = $clock . $this->sec($number) . "\n" . $this->blockHour($number) . "\n" . $this->simpleHour($number) . "\n" . $this->blockMin($number) . "\n" . $this->simpleMin($number);
+        return $clock;
+    }
 }

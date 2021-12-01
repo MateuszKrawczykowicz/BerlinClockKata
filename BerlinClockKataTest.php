@@ -44,4 +44,6 @@ class BerlinClockKataTest extends TestCase
         $actual = $firstLight->blockHour("22:53:05");
         $this->assertEquals("Y Y Y Y ", $actual);
     }
+
+
 }
