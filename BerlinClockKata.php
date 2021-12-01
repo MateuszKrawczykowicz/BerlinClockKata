@@ -9,7 +9,7 @@ class BerlinClockKata
             return 'O';
         }
     }
-    public function minutesl1(string $number):string{
+    public function blockMin(string $number):string{
         $out="";
         $nbrmin = 0;
         $nbrmin += intval($number[3]) *10;
@@ -25,7 +25,7 @@ class BerlinClockKata
         return $out;
     }
 
-    public function minutesl2(string $number):string{
+    public function simpleMin(string $number):string{
         $out="";
         $nbrmin = 0;
         $nbrmin += intval($number[3]) *10;
