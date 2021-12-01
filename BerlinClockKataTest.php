@@ -45,5 +45,12 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("Y Y Y Y ", $actual);
     }
 
+    // function Clock
+    public function testClock(){
+        $firstLight = new BerlinClockKata();
+        $actual = $firstLight->clock("22:53:05");
+        $this->assertEquals("O\nY Y Y Y \nY Y O O \nY Y Y Y Y Y Y Y Y Y O \nY Y Y O ", $actual);
+    }
+
 
 }
