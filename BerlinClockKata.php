@@ -42,4 +42,21 @@ class BerlinClockKata
         return $out;
     }
 
+    public function simpleHour(string $number):string{
+        $out="";
+        $nbrmin = 0;
+        $nbrmin += intval($number[0]) *10;
+        $nbrmin += intval($number[1]) ;
+        $nbrmin = $nbrmin%5;
+        for ($x = 0 ; $x<=3; $x++){
+            if ($nbrmin>=1){
+                $out = $out . "Y ";
+                $nbrmin -=1;
+            } else{
+                $out = $out . "O ";
+            }
+        }
+        return $out;
+    }
+
 }
