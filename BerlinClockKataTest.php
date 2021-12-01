@@ -32,4 +32,10 @@ class BerlinClockKataTest extends TestCase
         $actual = $firstLight->simpleMin("11:53:05");
         $this->assertEquals("Y Y Y O ", $actual);
     }
+
+    public function testHoursSimpleHourShouldReturnOneY(){
+        $firstLight = new BerlinClockKata();
+        $actual = $firstLight->simpleHour("11:53:05");
+        $this->assertEquals("Y O O O ", $actual);
+    }
 }
