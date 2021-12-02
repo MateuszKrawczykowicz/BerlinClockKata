@@ -9,6 +9,13 @@ class BerlinClockKataTest extends TestCase
         $actual = $firstLight->sec("11:57:05");
         $this->assertEquals("O", $actual);
     }
+
+    public function testBigBulbTimeEvenShouldReturnY(){
+        $firstLight = new BerlinClockKata();
+        $actual = $firstLight->sec("11:57:04");
+        $this->assertEquals("Y", $actual);
+    }
+
     public function testBlockMinShouldReturnOneY(){
         $firstLight = new BerlinClockKata();
         $actual = $firstLight->blockMin("11:05:05");
