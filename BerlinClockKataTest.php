@@ -4,6 +4,7 @@ use PHPUnit\Framework\TestCase;
 
 class BerlinClockKataTest extends TestCase
 {
+    // test sec
     public function testBigBulbTimeOddShouldReturnO(){
         $firstLight = new BerlinClockKata();
         $actual = $firstLight->sec("11:57:05");
@@ -16,6 +17,7 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("Y", $actual);
     }
 
+    // test min
     public function testBlockMinShouldReturnOneY(){
         $firstLight = new BerlinClockKata();
         $actual = $firstLight->blockMin("11:05:05");
@@ -94,6 +96,7 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("Y Y Y O ", $actual);
     }
 
+    // test hours
     public function testSimpleHourShouldReturnOneY(){
         $firstLight = new BerlinClockKata();
         $actual = $firstLight->simpleHour("11:53:05");
@@ -106,7 +109,7 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("Y Y Y Y ", $actual);
     }
 
-    // function Clock
+    // test Clock
     public function testClock1(){
         $firstLight = new BerlinClockKata();
         $actual = $firstLight->clock("22:53:05");
