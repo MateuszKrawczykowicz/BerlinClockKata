@@ -200,6 +200,12 @@ class BerlinClockKataTest extends TestCase
         $this->assertEquals("Y Y Y O ", $actual);
     }
 
+    public function testSimpleHourShouldReturnFourY(){
+        $firstLight = new BerlinClockKata();
+        $actual = $firstLight->simpleHour("14:53:05");
+        $this->assertEquals("Y Y Y Y ", $actual);
+    }
+
 
 
     // test Clock
